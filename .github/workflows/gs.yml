@@ -17,5 +17,5 @@ jobs:
           with:
             script: |
               const path = require('path')
-              const scriptPath = path.resolve('../../dist/index.js')
+              const scriptPath = path.resolve('./dist/index.js')
               console.log(require(scriptPath)() === "::error::Need a Google sheet id to load")
