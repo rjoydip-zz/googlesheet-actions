@@ -1,6 +1,6 @@
 {
   "name": "googlesheet-actions",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Github action for google spreadsheets to fetch data",
   "main": "lib/main.js",
   "scripts": {
