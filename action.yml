@@ -1,0 +1,13 @@
+name: 'googlesheet-actions'
+description: 'Github action for google spreadsheets to fetch data'
+author: 'rjoydip'
+inputs:
+  sheet-id:
+    description: 'google sheet id'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'box'  
+  color: 'yellow'
