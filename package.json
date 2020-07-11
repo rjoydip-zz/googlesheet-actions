@@ -1,6 +1,6 @@
 {
   "name": "googlesheet-actions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Github action for google spreadsheets to fetch data",
   "main": "lib/main.js",
   "scripts": {
@@ -52,6 +52,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-push": "npm run all",
       "pre-commit": "npm run all"
     }
   }

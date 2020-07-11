@@ -14,7 +14,7 @@ describe('[ googlesheet > success ]', () => {
   _beforeAll({
     key: key,
     status: 200,
-    file: "response.json"
+    file: 'response.json'
   });
 
   it('is array', async () => {
@@ -52,7 +52,7 @@ describe('[ googlesheet > empty ]', () => {
   _beforeAll({
     key: key,
     status: 200,
-    file: "empty_response.json"
+    file: 'empty_response.json'
   });
 
   it('is array empty', async () => {

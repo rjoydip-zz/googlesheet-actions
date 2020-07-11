@@ -4,7 +4,9 @@ interface StringMap {
   [key: string]: string;
 }
 
-export default async function sheet<T>(sheetId: string = ''): Promise<T[] | []> {
+export default async function sheet<T>(
+  sheetId: string = ''
+): Promise<T[] | []> {
   if (!sheetId) throw new Error('Need a Google sheet id to load');
   else
     try {
