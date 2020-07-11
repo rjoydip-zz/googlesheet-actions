@@ -2,10 +2,6 @@
 
 Github action for google spreadsheets to fetch data.
 
-## Latest version
-
-[googlesheet-actions@0.1.0](https://github.com/marketplace/actions/googlesheet-actions)
-
 ## Inputs
 
 ### sheet-id
