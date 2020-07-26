@@ -47,7 +47,7 @@ jobs:
           with:
             github-token: ${{secrets.GITHUB_TOKEN}}
             script: |
-                console.log(${{steps.googlesheet_actions.outputs.data}})
+                console.log(${{steps.googlesheet_actions.outputs.result}})
         - name: test
           run: |
             cat $HOME/data.json
