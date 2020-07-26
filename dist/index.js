@@ -3473,7 +3473,7 @@ function sheet(sheetId = '') {
             throw new Error('Need a Google sheet id to load');
         else
             try {
-                return (((_b = (_a = (yield axios_1.default.get(`https://spreadsheets.google.com/feeds/list/${sheetId}/default/public/values?alt=json`)).data) === null || _a === void 0 ? void 0 : _a.feed) === null || _b === void 0 ? void 0 : _b.entry) || []).map((row) => Object.keys(row)
+                return ((yield ((_b = (_a = (yield axios_1.default.get(`https://spreadsheets.google.com/feeds/list/${sheetId}/default/public/values?alt=json`)).data) === null || _a === void 0 ? void 0 : _a.feed) === null || _b === void 0 ? void 0 : _b.entry)) || []).map((row) => Object.keys(row)
                     .filter((key) => /^gsx\$/.test(key))
                     .reduce((obj, key) => {
                     obj[key.slice(4)] = row[key].$t;
