@@ -11,11 +11,11 @@ export default async function sheet<T>(
   else
     try {
       return (
-        (
+        (await (
           await axios.get(
             `https://spreadsheets.google.com/feeds/list/${sheetId}/default/public/values?alt=json`
           )
-        ).data?.feed?.entry || []
+        ).data?.feed?.entry) || []
       ).map((row: StringMap[]) =>
         Object.keys(row)
           .filter((key: string) => /^gsx\$/.test(key))
