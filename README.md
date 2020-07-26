@@ -20,7 +20,7 @@ steps.googlesheet_actions.outputs.result - json - Get all data as json format. T
 
 ```yml
 - name: googlesheet-actions
-  uses: rjoydip/googlesheet-actions@0.2.0
+  uses: rjoydip/googlesheet-actions@0.1.0
 ```
 
 ### Full example
@@ -39,7 +39,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - id: googlesheet_actions
-          uses: rjoydip/googlesheet-actions@0.2.0
+          uses: rjoydip/googlesheet-actions@0.1.0
           with:
             sheet-id: ${{ secrets.SHEET_ID }}
         - id: echo
