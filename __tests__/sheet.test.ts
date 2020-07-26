@@ -10,6 +10,19 @@ const dataFixture = getFileContent(join(fixtures), 'data.json');
 let db: any;
 const key = 'foo';
 
+
+describe('[ googlesheet > no > entry ]', () => {
+  _beforeAll({
+    key: key,
+    status: 200,
+    file: 'response_no_entry.json'
+  });
+  
+  it('is no entry', async () => {
+    expect(db).toEqual([]);
+  });
+});
+
 describe('[ googlesheet > success ]', () => {
   _beforeAll({
     key: key,
