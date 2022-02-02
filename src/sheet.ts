@@ -13,7 +13,7 @@ export default async function sheet<T>(
       return (
         (await (
           await axios.get(
-            `https://spreadsheets.google.com/feeds/list/${sheetId}/default/public/values?alt=json`
+            `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?alt=json`
           )
         ).data?.feed?.entry) || []
       ).map((row: StringMap[]) =>
