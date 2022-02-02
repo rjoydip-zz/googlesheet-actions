@@ -9,7 +9,7 @@
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
-    "pack": "ncc build",
+    "pack": "export SET NODE_OPTIONS=--openssl-legacy-provider && ncc build",
     "test": "jest",
     "all": "npm run build && npm run format && npm run lint:fix && npm test && npm run pack"
   },
@@ -35,6 +35,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.7.12",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^2.8.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^5.16.0",
@@ -49,11 +50,5 @@
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
     "typescript": "^3.6.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run all",
-      "pre-commit": "npm run all"
-    }
   }
 }
